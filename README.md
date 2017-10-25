@@ -1,4 +1,4 @@
-*** Bull's Eye
+# Bull's Eye
 
 This small game has been built to demonstrate some basic feature of React Native framework.
 We have tried to create reusable components to build the main user interface.
