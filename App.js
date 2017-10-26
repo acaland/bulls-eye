@@ -6,7 +6,7 @@ import {
   Alert,
   TouchableOpacity,
   TouchableWithoutFeedback,
-  Image,
+  ImageBackground,
   Modal,
   WebView,
   Platform
@@ -68,7 +68,7 @@ export default class App extends React.Component {
     ]);
 
   render = () => (
-    <Image style={styles.container} source={require("./assets/Background.png")}>
+    <ImageBackground style={styles.container} source={require("./assets/Background.png")}>
       <LabelWithNumber
         style={{ marginTop: 10 }}
         text="Put the Bull's Eye as close as you can to:"
@@ -97,7 +97,7 @@ export default class App extends React.Component {
         visible={this.state.showRules}
         onClose={() => this.setState({ showRules: false })}
       />
-    </Image>
+    </ImageBackground>
   );
 }
 
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     backgroundColor: "black",
     alignItems: "center",
     justifyContent: "space-around",
-    width: "100%"
+    width: null, height: null
   },
   bottomView: {
     marginBottom: 10,

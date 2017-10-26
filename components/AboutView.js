@@ -2,7 +2,7 @@ import React from "react";
 import {
   Text,
   View,
-  Image,
+  ImageBackground,
   Modal,
   WebView,
   StyleSheet,
@@ -25,7 +25,7 @@ export default class AboutView extends React.Component {
       onRequestClose={this.props.onClose}
     >
       <View style={styles.container}>
-        <Image
+        <ImageBackground
           style={styles.background}
           source={require("../assets/Background.png")}
         >
@@ -37,7 +37,7 @@ export default class AboutView extends React.Component {
           </View>
 
           <Button title="Close" onPress={this.props.onClose} />
-        </Image>
+        </ImageBackground>
       </View>
     </Modal>
   );
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
   },
   background: {
     flex: 1,
-    width: "100%",
+    width: null, height: null,
     justifyContent: "space-around",
     alignItems: "center"
   },

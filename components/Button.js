@@ -45,8 +45,8 @@ Button.propTypes = {
 
 const styles = StyleSheet.create({
   hitMeBtnWrapper: {
-    width: 100,
-    height: 37,
+    width: Platform.OS == "ios" ? 100 : 150,
+    height: Platform.OS == "ios" ? 37 : 55,
     justifyContent: "center",
     alignItems: "center",
     alignSelf: "center"
