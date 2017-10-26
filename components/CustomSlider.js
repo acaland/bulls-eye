@@ -1,5 +1,5 @@
 import React from "react";
-import { Slider, View, Text, Platform } from "react-native";
+import { Slider, View, Text, Platform, Image } from "react-native";
 import PropTypes from "prop-types";
 
 export default class CustomSlider extends React.Component {
@@ -8,6 +8,9 @@ export default class CustomSlider extends React.Component {
   };
   toggleStatus = () => this.setState({ isSliderHighlighted: true })
   render() {
+    // console.log("rendering Custom Slider");
+    // console.log(JSON.stringify(require("../assets/SliderThumb-Highlighted.png")))
+    // console.log(require("../assets/SliderThumb-Normal.png"));
     return (
       <View style={styles.sliderView}>
         <Text style={[styles.textlabels, styles.minMax, {textAlign: "right"}]}>
@@ -20,10 +23,10 @@ export default class CustomSlider extends React.Component {
           maximumTrackImage={require("../assets/SliderTrackRight2.png")}
           thumbImage={
             this.state.isSliderHighlighted
-              ? require("../assets/SliderThumb-Highlighted.png")
-              : require("../assets/SliderThumb-Normal.png")
+              ? require('../assets/SliderThumb-Highlighted.png')
+              : require('../assets/SliderThumb-Normal.png')
           }
-          onValueChange={this.toggleStatus}
+          onResponderGrant={this.toggleStatus}
           value={this.props.initialValue}
           onSlidingComplete={value => {
             this.setState({ isSliderHighlighted: false });
