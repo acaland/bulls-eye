@@ -10,3 +10,7 @@ We make use of functional components and class based components, proptypes, comp
 
 The example is inspired by the app built in the first chapter of the iOS Apprentice Book, published by Ray Wenderlich.
 
+### Artwork license
+Artwork/images/designs: from iOS Apprentice book, available at www.raywenderlich.com
+
+
